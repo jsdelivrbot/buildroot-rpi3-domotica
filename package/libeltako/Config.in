@@ -1,4 +1,5 @@
 config BR2_PACKAGE_LIBELTAKO
 	bool "libeltako"
+	select BR2_PACKAGE_LIBVSB
 	help
 	  Library to communicate with elktako series 14 domotica system
