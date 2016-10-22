@@ -64,6 +64,7 @@ BR2_PACKAGE_CURL=y
 
 # Eltako py specific things
 BR2_PACKAGE_LIBELTAKO=y
+BR2_PACKAGE_LIBVSB=y
 
 # Filesystem / image
 BR2_TARGET_ROOTFS_EXT2=y
