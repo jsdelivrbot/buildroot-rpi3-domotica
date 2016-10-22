@@ -1854,6 +1854,7 @@ endmenu
 
 menu "EltakoPI specific packages"
 	source "package/libeltako/Config.in"
+	source "package/libvsb/Config.in"
 endmenu
 
 endmenu

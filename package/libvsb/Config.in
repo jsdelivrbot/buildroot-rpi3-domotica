@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LIBVSB
+	bool "libvsb"
+	help
+	  Virtual serial bus library
