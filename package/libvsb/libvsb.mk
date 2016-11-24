@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-LIBVSB_VERSION = v0.1.0
+LIBVSB_VERSION = v0.1.1
 LIBVSB_SOURCE = $(LIBVSB_VERSION).tar.gz
 # Do not use the github helper here, the generated tarball is *NOT*
 # the same as the one uploaded by upstream for the release.
