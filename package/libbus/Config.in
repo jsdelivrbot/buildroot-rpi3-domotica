@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LIBBUS
+	bool "libbus"
+	help
+	  Utilitie library for C applications
