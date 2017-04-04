@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Starts eltakod.
+#
+
+ELTAKOD_PIDFILE="/var/run/eltakod.pid"
+ELTAKOD_ARGS="-d -p $ELTAKOD_PIDFILE /dev/ttyUSB0"
+
+start() {
+	printf "Starting eltakod: "
+	umask 077
+
+	start-stop-daemon -v -S -q -p $ELTAKOD_PIDFILE --exec /usr/sbin/eltakod -- $ELTAKOD_ARGS
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+stop() {
+	printf "Stopping eltakod: "
+	start-stop-daemon -K -q -p $ELTAKOD_PIDFILE
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+restart() {
+	stop
+	start
+}
+
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
+	;;
+  restart|reload)
+  	restart
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
