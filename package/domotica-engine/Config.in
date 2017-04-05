@@ -1,0 +1,7 @@
+config BR2_PACKAGE_DOMOTICA-ENGINE
+	bool "domotica-engine daemon"
+	select BR2_PACKAGE_LIBBUS
+	select BR2_PACKAGE_LIBELTAKO
+	select BR2_PACKAGE_LIBVSB
+	help
+	  Domotica engine base daemon
