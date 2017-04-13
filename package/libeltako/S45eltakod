@@ -10,6 +10,8 @@ start() {
 	printf "Starting eltakod: "
 	umask 077
 
+	modprobe ftdi_sio
+
 	start-stop-daemon -v -S -q -p $ELTAKOD_PIDFILE --exec /usr/sbin/eltakod -- $ELTAKOD_ARGS
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 }
