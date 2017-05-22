@@ -1,17 +1,17 @@
 ################################################################################
 #
-# libbus
+# libeu
 #
 ################################################################################
 
-LIBBUS_VERSION = v0.0.3
-LIBBUS_SOURCE = libbus-$(LIBBUS_VERSION).tar.gz
+LIBEU_VERSION = v0.0.2
+LIBEU_SOURCE = libeu-$(LIBEU_VERSION).tar.gz
 # Do not use the github helper here, the generated tarball is *NOT*
 # the same as the one uploaded by upstream for the release.
-LIBBUS_SITE = https://github.com/jnevens/libbus/archive
-LIBBUS_LICENSE = LGPLv2+ with exception
-LIBBUS_LICENSE_FILES = COPYING
-LIBBUS_AUTORECONF = YES
-LIBBUS_INSTALL_STAGING = YES
+LIBEU_SITE = https://github.com/jnevens/libeu/archive
+LIBEU_LICENSE = LGPLv2+ with exception
+LIBEU_LICENSE_FILES = COPYING
+LIBEU_AUTORECONF = YES
+LIBEU_INSTALL_STAGING = YES
 
 $(eval $(autotools-package))

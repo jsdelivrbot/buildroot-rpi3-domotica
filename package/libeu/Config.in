@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LIBEU
+	bool "libeu"
+	help
+	  Embedded Utilitie library for C applications

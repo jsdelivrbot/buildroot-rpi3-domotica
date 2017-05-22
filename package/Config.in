@@ -1855,7 +1855,7 @@ endmenu
 menu "EltakoPI specific packages"
 	source "package/libeltako/Config.in"
 	source "package/libvsb/Config.in"
-	source "package/libbus/Config.in"
+	source "package/libeu/Config.in"
 	source "package/domotica-engine/Config.in"
 endmenu
 
