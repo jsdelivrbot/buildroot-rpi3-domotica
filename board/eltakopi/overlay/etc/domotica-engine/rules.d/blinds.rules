@@ -1,0 +1,37 @@
+# blinds                                                                                                                                                     
+OUTPUT rolv FSB14 0xEEEE3000 30
+OUTPUT rold FSB14 0xEEEE3001 30
+OUTPUT rolk FSB14 0xEEEE3002 30
+OUTPUT rols FSB14 0xEEEE3003 30
+OUTPUT rolb FSB14 0xEEEE3004 30
+
+# SUNRISE PLUGIN
+#
+# SUNRISED name ALTITUDE LATTITUDE
+#
+# triggers the following events:
+#     SUNRISE SUNRISE_CIVIL SUNRISE_NAUTICAL SUNRISE_ASTRONOMICAL
+#     SUNSET SUNSET_CIVIL SUNSET_NAUTICAL SUNSET_ASTRONOMICAL
+SUNRISET sr1 50.991816N 4.538554E
+
+# test input
+INPUT sw1 FTS14EM 0xFEFEE20E
+
+IF sw1 SHORT_PRESS
+DO rolv UP
+IF sw1 LONG_PRESS
+DO rolv DOWN
+
+IF sr1 SUNRISE
+DO rolv UP
+DO rold UP
+DO rolk UP
+DO rols UP
+DO rolb UP
+
+IF sr1 SUNSET_CIVIL
+DO rolv DOWN
+DO rold DOWN
+DO rolk DOWN
+DO rols DOWN
+DO rolb DOWN
