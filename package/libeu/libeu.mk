@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-LIBEU_VERSION = v0.0.2
+LIBEU_VERSION = v0.1.0
 LIBEU_SOURCE = libeu-$(LIBEU_VERSION).tar.gz
 # Do not use the github helper here, the generated tarball is *NOT*
 # the same as the one uploaded by upstream for the release.
