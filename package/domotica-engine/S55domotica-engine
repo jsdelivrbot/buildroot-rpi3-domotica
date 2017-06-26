@@ -6,6 +6,9 @@
 DOMOTICA_ENGINE_PIDFILE="/var/run/domotica-engine.pid"
 DOMOTICA_ENGINE_ARGS="-D"
 
+# export TZ for local time calculations
+export TZ=$(cat /etc/timezone)
+
 start() {
 	printf "Starting domotica-engine: "
 	umask 077
